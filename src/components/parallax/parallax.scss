@@ -24,8 +24,7 @@
 		z-index: 3;
 	}
 
-	.stars {
-		background-image: url("/stars.png");
+	.planets {
 		width: 100%;
 		height: 100%;
 		position: absolute;
@@ -33,8 +32,8 @@
 		background-size: cover;
 		z-index: 2;
 	}
-	.planets {
-		background-image: url("/planets.png");
+	.stars {
+		background-image: url("/stars.png");
 		width: 100%;
 		height: 100%;
 		position: absolute;

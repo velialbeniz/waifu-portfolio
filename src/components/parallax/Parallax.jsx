@@ -5,12 +5,15 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const Parallax = ({ type }) => {
 	const ref = useRef();
 
-	const { scrollYProgress } = useScroll({
+	const { scrollYProgress, scrollXProgress } = useScroll({
 		target: ref,
 		offset: ["start start", "end start"],
 	});
 
 	const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "500%"]);
+	const planetBg = useTransform(scrollYProgress, [0, 1], ["0%", "80%"]);
+
+	// const planetBg = useTransform(scrollXProgress, [0, 1], ["0%", "200%"])
 
 	return (
 		<div
@@ -20,8 +23,13 @@ const Parallax = ({ type }) => {
 			className="parallax">
 			<motion.h1 style={{ y: yBg }}>{type === "skills" ? "What I Do?" : "What I Did?"}</motion.h1>
 			<motion.div className="mountains"></motion.div>
-			<motion.div className="planets"></motion.div>
-			<motion.div className="stars"></motion.div>
+			<motion.div
+				style={{ y: planetBg, backgroundImage: `url(${type === "skills" ? "/planets.png" : "/sun.png"})` }}
+				className="planets"></motion.div>
+
+			<motion.div
+				style={{ x: planetBg }}
+				className="stars"></motion.div>
 		</div>
 	);
 };

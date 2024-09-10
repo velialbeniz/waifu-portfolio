@@ -5,6 +5,7 @@ import { Loader } from "./components/loader/Loader";
 import Navbar from "./components/navbar/Navbar";
 import Hero from "./components/hero/Hero";
 import Parallax from "./components/parallax/Parallax";
+import Skills from "./components/skills/Skills";
 
 const App = () => {
 	const [loading, setLoading] = useState(false);
@@ -33,7 +34,9 @@ const App = () => {
 				<section id="Skills">
 					<Parallax type="skills" />
 				</section>
-				<section>Services</section>
+				<section>
+                    <Skills />
+                </section>
 				<section id="Portfolio">
 					<Parallax type="portfolio" />
 				</section>
