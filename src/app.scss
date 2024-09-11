@@ -27,6 +27,15 @@ section {
 	overflow: hidden;
 }
 
+@keyframes carousel-move {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
 @mixin mobile {
 	@media (max-width: 738px) {
 		@content;
