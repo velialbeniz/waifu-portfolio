@@ -43,9 +43,9 @@
 				aspect-ratio: 16 / 9; // changeable
 				position: relative;
 
-                @include mobile {
-                    aspect-ratio: 9 / 16;
-                }
+				@include mobile {
+					aspect-ratio: 9 / 16;
+				}
 
 				.item-text {
 					padding: 20px;
@@ -60,9 +60,9 @@
 
 					p {
 						font-size: 24px;
-                        @include mobile {
-                            font-size: 16px;
-                        }
+						@include mobile {
+							font-size: 16px;
+						}
 					}
 
 					button {
@@ -74,11 +74,11 @@
 						border: none;
 						cursor: pointer;
 
-                        @include mobile {
-                            width: 80px;
-                            height: 40px;
-                            font-size: 12px;
-                        }
+						@include mobile {
+							width: 80px;
+							height: 40px;
+							font-size: 12px;
+						}
 					}
 				}
 
@@ -96,10 +96,12 @@
 		flex-direction: column;
 		gap: 12px;
 		overflow: hidden;
-		margin-top: -300px;
+		// margin-top: calc((var(--viewport-height) - var(--element-height)) * -1);
+		margin-top: -400px;
 
 		@include mobile {
-			margin-top: calc((var(--viewport-height) - var(--element-height)) / 2 * -1);
+			// margin-top: calc((var(--viewport-height) - var(--mobile-element-height)) * -1);
+			margin-top: -300px;
 		}
 
 		.small-slider {
@@ -109,18 +111,18 @@
 			position: relative;
 			left: -60px;
 
-            @include mobile {
-                gap: 10px;
-            }
+			@include mobile {
+				gap: 10px;
+			}
 
 			.item {
 				width: 25vw;
 				flex-shrink: 0;
 				aspect-ratio: 16 / 9;
 
-                @include mobile {
-                    aspect-ratio: 4 / 3;
-                }
+				@include mobile {
+					aspect-ratio: 4 / 3;
+				}
 
 				img {
 					width: 100%;

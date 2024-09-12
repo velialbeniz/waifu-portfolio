@@ -28,8 +28,9 @@ section {
 }
 
 :root {
-    --element-height: calc(300px * (16 / 9));
-    --viewport-height: 100vh;
+	--element-height: calc(60vw * (16 / 9) / 2);
+    --mobile-element-height: calc(60vw * (9 / 16) / 2)
+	--viewport-height: 100vh;
 }
 
 @keyframes carousel-move {
