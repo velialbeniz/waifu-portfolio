@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ReactLenis } from "@studio-freight/react-lenis";
-import "./App.scss";
+import "./app.scss";
 import { Loader } from "./components/loader/Loader";
 import Navbar from "./components/navbar/Navbar";
 import Hero from "./components/hero/Hero";
