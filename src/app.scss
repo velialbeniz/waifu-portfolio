@@ -27,6 +27,11 @@ section {
 	overflow: hidden;
 }
 
+:root {
+    --element-height: calc(300px * (16 / 9));
+    --viewport-height: 100vh;
+}
+
 @keyframes carousel-move {
 	0% {
 		transform: translateX(0);

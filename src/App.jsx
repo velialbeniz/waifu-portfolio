@@ -7,6 +7,7 @@ import Hero from "./components/hero/Hero";
 import Parallax from "./components/parallax/Parallax";
 import Skills from "./components/skills/Skills";
 import Portfolio from "./components/portfolio/Portfolio";
+import Usps from "./components/usps/Usps";
 
 const App = () => {
 	const [loading, setLoading] = useState(false);
@@ -36,14 +37,18 @@ const App = () => {
 					<Parallax type="skills" />
 				</section>
 				<section>
-                    <Skills />
-                </section>
+					<Skills />
+				</section>
 				<section id="Portfolio">
 					<Parallax type="portfolio" />
 				</section>
-				<section>
-                    <Portfolio />
-                </section>
+				<div style={{ height: "100vh", background: "black", overflow: "hidden", position: "relative", zIndex: 10 }}>
+					<Usps />
+				</div>
+				<div>
+					<Portfolio />
+				</div>
+				<section>{/* portfolio */}</section>
 				<section>Portfolio2</section>
 				<section>Portfolio3</section>
 				<section id="Contact">Contact</section>

@@ -7,7 +7,7 @@ const Navbar = () => {
         {/* Sidebar */}
         <Sidebar />
         <div className="wrapper">
-            <span>yasemin albeniz</span>
+            <span>yasemin</span>
             <div className="social">
                 <a href="#"><img src="./facebook.png" /></a>
                 <a href="#"><img src="./instagram.png" /></a>
